@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Tutors.WebApi.Configurations;
+using NJsonSchema;
+using NSwag.AspNetCore;
 
 namespace Tutors.WebApi
 {
@@ -27,6 +29,7 @@ namespace Tutors.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddSwaggerDocument();
         }
 
         // ConfigureContainer is where you can register things directly
@@ -47,6 +50,8 @@ namespace Tutors.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseSwagger();
+            app.UseSwaggerUi3();
 
             app.UseMvc();
         }

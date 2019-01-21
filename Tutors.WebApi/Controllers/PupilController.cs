@@ -22,12 +22,15 @@ namespace Tutors.WebApi.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(200)]
         public async Task<ActionResult<List<PupilInfoListItem>>> Get()
         {
             return await _pupilService.GetPupils(userId);
         }
 
         [HttpGet("{id}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public async Task<ActionResult<PupilInfo>> Get(int id)
         {
             if (id == 0)
@@ -37,6 +40,8 @@ namespace Tutors.WebApi.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public async Task<ActionResult<PupilInfo>>Save(PupilInfo pupil)
         {
             if (pupil == null)
@@ -46,6 +51,8 @@ namespace Tutors.WebApi.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
         public async Task<ActionResult<PupilInfo>>Delete(int id)
         {
             if (id == 0)
