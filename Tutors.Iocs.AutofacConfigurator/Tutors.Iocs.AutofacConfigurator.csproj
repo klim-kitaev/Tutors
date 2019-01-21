@@ -5,12 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
     <PackageReference Include="AutoMapper" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tutors.Dao.Abstract\Tutors.Dao.Abstract.csproj" />
-    <ProjectReference Include="..\Tutors.Service.Dto\Tutors.Service.Dto.csproj" />
+    <ProjectReference Include="..\Tutors.Dao.Memory\Tutors.Dao.Memory.csproj" />
+    <ProjectReference Include="..\Tutors.Service\Tutors.Service.csproj" />
   </ItemGroup>
 
 </Project>
