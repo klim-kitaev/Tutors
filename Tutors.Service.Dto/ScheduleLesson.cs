@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tutors.Domain
+namespace Tutors.Service.Dto
 {
     /// <summary>
     /// Данные о занятии по расписанию
@@ -12,7 +12,7 @@ namespace Tutors.Domain
         /// <summary>
         /// День занятий
         /// </summary>
-        public DayOfWeek LessonDay { get; set; }
+        public int LessonDay { get; set; }
         /// <summary>
         /// Время начала занятий
         /// </summary>
@@ -20,18 +20,6 @@ namespace Tutors.Domain
         /// <summary>
         /// Продолжительность занятий
         /// </summary>
-        public LessonDuration LessonsDuration { get; set; }
-
-        /// <summary>
-        /// Время окончания занятий
-        /// </summary>
-        public TimeSpan LessonFinishTime
-        {
-            get
-            {
-                return LessonUtilites.GetFinishTime(LessonTime, LessonsDuration);
-            }
-        }
-
+        public int LessonsDuration { get; set; }
     }
 }

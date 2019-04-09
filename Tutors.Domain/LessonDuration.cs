@@ -7,18 +7,18 @@ namespace Tutors.Domain
     /// <summary>
     /// Продолжительность уроков
     /// </summary>
-    public enum LessonsDuration
+    public enum LessonDuration
     {
         /// <summary>
         /// Один час
         /// </summary>
         OneHour = 1,
         /// <summary>
-        /// Два часа
+        /// Полтора часа
         /// </summary>
         OneAndHalf = 2,
         /// <summary>
-        /// Три часа
+        /// Два часа
         /// </summary>
         TwoHour = 3
     }

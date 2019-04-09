@@ -18,9 +18,21 @@ namespace Tutors.Service.Dto
         /// </summary>
         public string LastName { get; set; }
         /// <summary>
-        /// Список цен в зависимости от времени урока
+        /// Цена урока за час
         /// </summary>
-        public Dictionary<int, Decimal> PriceList { get; set; }
-        
+        public Decimal? OneHourPrice { get; set; }
+        /// <summary>
+        /// Цена урока за полтора часа
+        /// </summary>
+        public Decimal? OneAndHalfPrice { get; set; }
+        /// <summary>
+        /// Цена урока за два часа
+        /// </summary>
+        public Decimal? TwoHourPrice { get; set; }
+
+        /// <summary>
+        /// Расписание занятий
+        /// </summary>
+        public Schedule PupilSchedule { get; set; }
     }
 }

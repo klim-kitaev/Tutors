@@ -13,6 +13,8 @@ using Microsoft.Extensions.Options;
 using Tutors.WebApi.Configurations;
 using NJsonSchema;
 using NSwag.AspNetCore;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 
 namespace Tutors.WebApi
 {
@@ -28,8 +30,27 @@ namespace Tutors.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc(options => {
+                options.ModelBinderProviders.Insert(0, new RuLocationDateModelBinderProvider());
+                })
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddJsonOptions(options =>
+                {
+                    options.SerializerSettings.Culture = new CultureInfo("ru-RU");
+                }); 
             services.AddSwaggerDocument();
+
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new List<CultureInfo>
+                        {
+                            new CultureInfo("ru-RU")
+                        };
+
+                options.DefaultRequestCulture = new RequestCulture(culture: "ru-RU", uiCulture: "ru-RU");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
         }
 
         // ConfigureContainer is where you can register things directly
@@ -52,6 +73,9 @@ namespace Tutors.WebApi
             }
             app.UseSwagger();
             app.UseSwaggerUi3();
+            app.UseCors(builder => builder.WithOrigins("http://localhost:4200")
+                                            .AllowAnyHeader()
+                                            .AllowAnyMethod());
 
             app.UseMvc();
         }

@@ -10,12 +10,17 @@ namespace Tutors.Domain
     public class ExtraLesson
     {
         /// <summary>
+        /// Id добавленного урока
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
         /// Дата и время начала занятий
         /// </summary>
         public DateTime LessonsDateTime { get; set; }
         /// <summary>
         /// Продолжительность занятий
         /// </summary>
-        public LessonsDuration LessonsDuration { get; set; }
+        public LessonDuration LessonsDuration { get; set; }
     }
 }

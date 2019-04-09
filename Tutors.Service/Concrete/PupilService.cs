@@ -87,6 +87,20 @@ namespace Tutors.Service.Concrete
         public async Task<Dto.PupilInfo> SavePupilInfo(Dto.PupilInfo pupil, int userId)
         {
             Domain.Pupil domainPupil = _Convert(pupil);
+            domainPupil.PriceList = new Dictionary<Domain.LessonDuration, decimal>();
+            if(pupil.OneHourPrice != null)
+            {
+                domainPupil.PriceList.Add(Domain.LessonDuration.OneHour, pupil.OneHourPrice.Value);
+            }
+            if (pupil.OneAndHalfPrice != null)
+            {
+                domainPupil.PriceList.Add(Domain.LessonDuration.OneAndHalf, pupil.OneAndHalfPrice.Value);
+            }
+            if (pupil.TwoHourPrice != null)
+            {
+                domainPupil.PriceList.Add(Domain.LessonDuration.TwoHour, pupil.TwoHourPrice.Value);
+            }
+            domainPupil.UserId = userId;
             domainPupil = await _pupilDao.SavePupil(domainPupil);
             return _Convert(domainPupil);
         }

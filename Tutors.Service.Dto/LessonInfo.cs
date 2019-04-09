@@ -29,5 +29,25 @@ namespace Tutors.Service.Dto
         /// Цена занятия
         /// </summary>
         public Decimal Price { get; set; }
+
+        /// <summary>
+        /// Id ученика
+        /// </summary>
+        public int PupilId { get; set; }
+
+        /// <summary>
+        /// Имя ученика
+        /// </summary>
+        public string PupilName { get; set; }
+
+        /// <summary>
+        /// Тип урока
+        /// </summary>
+        public LessonInfoType LessonInfoType { get; set; }
+
+        /// <summary>
+        /// Продолжительность занятий
+        /// </summary>
+        public int LessonDuration { get; set; }
     }
 }

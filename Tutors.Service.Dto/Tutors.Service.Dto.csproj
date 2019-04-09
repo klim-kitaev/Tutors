@@ -4,4 +4,46 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Update="LessonInfo.cs">
+      <Generator>DtsGenerator</Generator>
+      <LastGenOutput>LessonInfo.cs.d.ts</LastGenOutput>
+    </Compile>
+    <Compile Update="PupilInfo.cs">
+      <Generator>DtsGenerator</Generator>
+      <LastGenOutput>PupilInfo.cs.d.ts</LastGenOutput>
+    </Compile>
+    <Compile Update="PupilInfoListItem.cs">
+      <Generator>DtsGenerator</Generator>
+      <LastGenOutput>PupilInfoListItem.cs.d.ts</LastGenOutput>
+    </Compile>
+    <Compile Update="ScheduleLesson.cs">
+      <Generator>DtsGenerator</Generator>
+      <LastGenOutput>ScheduleLesson.cs.d.ts</LastGenOutput>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LessonInfo.cs.d.ts">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LessonInfo.cs</DependentUpon>
+    </None>
+    <None Update="PupilInfo.cs.d.ts">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PupilInfo.cs</DependentUpon>
+    </None>
+    <None Update="PupilInfoListItem.cs.d.ts">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PupilInfoListItem.cs</DependentUpon>
+    </None>
+    <None Update="ScheduleLesson.cs.d.ts">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ScheduleLesson.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+
 </Project>

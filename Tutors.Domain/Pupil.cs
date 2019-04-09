@@ -20,7 +20,7 @@ namespace Tutors.Domain
         /// <summary>
         /// Список цен в зависимости от времени урока
         /// </summary>
-        public Dictionary<LessonsDuration, Decimal> PriceList { get; set; }
+        public Dictionary<LessonDuration, Decimal> PriceList { get; set; }
         /// <summary>
         /// Расписание занятий
         /// </summary>

@@ -21,11 +21,11 @@ namespace Tutors.Dao.Memory
                 FirstName = "Клим",
                 LastName = "Китаев",
                 UserId = 1,
-                PriceList = new Dictionary<LessonsDuration, decimal>
+                PriceList = new Dictionary<LessonDuration, decimal>
                 {
-                    {LessonsDuration.OneHour,1200 },
-                    {LessonsDuration.OneAndHalf,1800 },
-                    {LessonsDuration.TwoHour,2400 }
+                    {LessonDuration.OneHour,1200 },
+                    {LessonDuration.OneAndHalf,1800 },
+                    {LessonDuration.TwoHour,2400 }
                 },
                 PupilSchedule = new Schedule
                 {
@@ -35,13 +35,13 @@ namespace Tutors.Dao.Memory
                         new ScheduleLesson
                         {
                             LessonDay = DayOfWeek.Monday,
-                            LessonsDuration = LessonsDuration.OneHour,
+                            LessonsDuration = LessonDuration.OneHour,
                             LessonTime = new TimeSpan(18,0,0)
                         },
                         new ScheduleLesson
                         {
                             LessonDay = DayOfWeek.Wednesday,
-                            LessonsDuration = LessonsDuration.OneAndHalf,
+                            LessonsDuration = LessonDuration.OneAndHalf,
                             LessonTime = new TimeSpan(17,30,0)
                         }
                     }
@@ -100,10 +100,10 @@ namespace Tutors.Dao.Memory
             }
             else
             {
-                Pupil foundPupil = _pupils.Where(p => p.Id == pupil.Id).FirstOrDefault();
-                if(foundPupil != null)
+                int index = _pupils.FindIndex(p => p.Id == pupil.Id);
+                if(index >= 0)
                 {
-                    foundPupil = pupil;
+                    _pupils[index] = pupil;
                 }
             }
             return Task.FromResult<Pupil>(pupil);

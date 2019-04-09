@@ -21,6 +21,10 @@ namespace Tutors.WebApi.Controllers
             _pupilService = pupilService ?? throw new ArgumentNullException(nameof(pupilService));
         }
 
+        /// <summary>
+        /// Получить список учеников
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [ProducesResponseType(200)]
         public async Task<ActionResult<List<PupilInfoListItem>>> Get()
@@ -28,6 +32,11 @@ namespace Tutors.WebApi.Controllers
             return await _pupilService.GetPupils(userId);
         }
 
+        /// <summary>
+        /// Получить данные по ученику
+        /// </summary>
+        /// <param name="id">id ученика</param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
@@ -39,6 +48,11 @@ namespace Tutors.WebApi.Controllers
             return await _pupilService.GetPupilInfo(id, userId);
         }
 
+        /// <summary>
+        /// Сохранить / обновить данные об ученике
+        /// </summary>
+        /// <param name="pupil">данные об ученике</param>
+        /// <returns></returns>
         [HttpPost]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
@@ -50,6 +64,11 @@ namespace Tutors.WebApi.Controllers
             return await _pupilService.SavePupilInfo(pupil, userId);
         }
 
+        /// <summary>
+        /// Удалить ученика
+        /// </summary>
+        /// <param name="id">id ученика</param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]

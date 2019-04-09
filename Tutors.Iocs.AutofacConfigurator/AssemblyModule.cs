@@ -26,6 +26,8 @@ namespace Tutors.Iocs.AutofacConfigurator
         private void _RegisterServices(ContainerBuilder builder)
         {
             builder.RegisterType<PupilService>().As<IPupilService>();
+            builder.RegisterType<LessonService>().As<ILessonService>();
+            builder.RegisterType<SheduleService>().As<ISheduleService>();
         }
     }
 }
