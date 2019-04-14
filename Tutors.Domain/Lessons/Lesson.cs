@@ -28,6 +28,11 @@ namespace Tutors.Domain
         public Pupil Pupil { get; set; }
 
         /// <summary>
+        /// Тип урока
+        /// </summary>
+        public LessonInfoType LessonInfoType { get; set; }
+
+        /// <summary>
         /// Дата и время начала занятий
         /// </summary>
         public DateTime LessonsFinishDateTime
@@ -37,6 +42,11 @@ namespace Tutors.Domain
                 return LessonUtilites.GetFinishDateTime(LessonsDateTime, LessonsDuration);
             }
         }
+
+        /// <summary>
+        /// Id урока (для дополнительных уроков)
+        /// </summary>
+        public int? Id { get; set; }
 
     }
 }

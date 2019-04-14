@@ -114,5 +114,29 @@ namespace Tutors.Dao.Memory
             int maxId = _pupils.Select(p => p.Id).Max();
             return maxId + 1;
         }
+
+        private int GenerateExraLessonId()
+        {
+            int maxId = _pupils.SelectMany(p => p.PupilSchedule.ExtraLessons.Select(x => x.Id)).DefaultIfEmpty(0).Max();
+            return maxId + 1;
+        }
+
+        /// <summary>
+        /// Добавление дополнительного урока
+        /// </summary>
+        /// <param name="pupilId"></param>
+        /// <param name="extraLesson"></param>
+        /// <returns></returns>
+        public async Task<Pupil> AddExtraLesson(int pupilId, ExtraLesson extraLesson)
+        {
+            var pupil = await GetPupil(pupilId);
+            if(pupil == null)
+            {
+                throw new ArgumentException("Pupil not found");
+            }
+            extraLesson.Id = GenerateExraLessonId();
+            pupil.PupilSchedule.ExtraLessons.Add(extraLesson);
+            return await SavePupil(pupil);
+        }
     }
 }

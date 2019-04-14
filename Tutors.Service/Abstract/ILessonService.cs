@@ -18,5 +18,12 @@ namespace Tutors.Service.Abstract
         /// <param name="endDate"></param>
         /// <returns></returns>
         Task<List<LessonInfo>> GetLessons(DateTime startDate, DateTime endDate, int userId);
+
+        /// <summary>
+        /// Сохранение изменений в уроках
+        /// </summary>
+        /// <param name="lessonInfo"></param>
+        /// <returns></returns>
+        Task ChangeLessons(ChangeLessonInfo lessonInfo);
     }
 }

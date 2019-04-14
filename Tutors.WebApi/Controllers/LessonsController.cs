@@ -36,10 +36,17 @@ namespace Tutors.WebApi.Controllers
             return await _lessonService.GetLessons(startDate, endDate, userId);
         }
 
-
+        /// <summary>
+        /// Сохранение изменений в уроках
+        /// </summary>
+        /// <param name="lessonInfo"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [ProducesResponseType(200)]
         public async Task<ActionResult> ChangeLessons(ChangeLessonInfo lessonInfo)
         {
-            return await Task.FromResult<AcceptedResult>(null);
+            await _lessonService.ChangeLessons(lessonInfo);
+            return Ok();
         }
     }
 }

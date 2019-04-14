@@ -10,7 +10,7 @@ namespace Tutors.Service.Dto
         /// <summary>
         /// Тип урока (по плану или добавленный)
         /// </summary>
-        public LessonInfoType LessonType { get; set; }
+        public int LessonType { get; set; }
 
         /// <summary>
         /// Id урока (только для лобавленных)

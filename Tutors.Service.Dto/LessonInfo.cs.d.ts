@@ -16,7 +16,10 @@ declare module server {
 		/** Имя ученика */
 		pupilName: string;
 		/** Тип урока */
-		lessonInfoType: any;
+		lessonInfoType: number;
+		/** Продолжительность занятий */
 		lessonDuration: number;
+		/** Id урока (для дополнительных уроков) */
+		id?: number;
 	}
 }

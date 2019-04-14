@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tutors.Service.Dto
+namespace Tutors.Domain
 {
     /// <summary>
     /// Тип урока

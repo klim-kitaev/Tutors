@@ -35,10 +35,13 @@ namespace Tutors.Service.Configurations
                 .ForMember(o => o.StartDate, m => m.MapFrom(s => s.LessonsDateTime))
                 .ForMember(o => o.StartDateStr, m => m.MapFrom(s => s.LessonsDateTime.ToString("dd.MM.yyyy HH:mm:ss")))
                 .ForMember(o => o.EndDate, m => m.MapFrom(s => s.LessonsFinishDateTime))
-                .ForMember(o => o.EndDateStr, m => m.MapFrom(s => s.LessonsFinishDateTime.ToString("dd.MM.yyyy HH:mm:ss")))
-                .ForMember(o => o.LessonInfoType, m => m.MapFrom(s => Dto.LessonInfoType.Planned))
+                .ForMember(o => o.EndDateStr, m => m.MapFrom(s => s.LessonsFinishDateTime.ToString("dd.MM.yyyy HH:mm:ss")))                
                 .ForMember(o=>o.LessonDuration,m=>m.MapFrom(s=>(int)s.LessonsDuration))
                 .ForMember(o => o.PupilName, m => m.MapFrom(s => $"{s.Pupil.FirstName} {s.Pupil.LastName}".Trim()));
+
+
+            CreateMap<Dto.InsertedLessonInfo, Domain.ExtraLesson>()
+                .ForMember(o => o.LessonsDuration, m => m.MapFrom(s => (Domain.LessonDuration)s.LessonsDuration));
 
         }
 

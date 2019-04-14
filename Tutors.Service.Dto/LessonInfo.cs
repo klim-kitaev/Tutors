@@ -43,11 +43,16 @@ namespace Tutors.Service.Dto
         /// <summary>
         /// Тип урока
         /// </summary>
-        public LessonInfoType LessonInfoType { get; set; }
+        public int LessonInfoType { get; set; }
 
         /// <summary>
         /// Продолжительность занятий
         /// </summary>
         public int LessonDuration { get; set; }
+
+        /// <summary>
+        /// Id урока (для дополнительных уроков)
+        /// </summary>
+        public int? Id { get; set; }
     }
 }

@@ -39,5 +39,13 @@ namespace Tutors.Dao.Abstract
         /// <returns></returns>
         Task<Pupil> DeletePupil(int id);
 
+
+        /// <summary>
+        /// Добавление дополнительного урока
+        /// </summary>
+        /// <param name="pupilId"></param>
+        /// <param name="extraLesson"></param>
+        /// <returns></returns>
+        Task<Pupil> AddExtraLesson(int pupilId, ExtraLesson extraLesson);
     }
 }

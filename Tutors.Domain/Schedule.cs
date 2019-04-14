@@ -22,5 +22,12 @@ namespace Tutors.Domain
         /// Отмененные уроки
         /// </summary>
         public List<CanceledLesson> CanceledLessons { get; set; }
+
+        public Schedule()
+        {
+            ScheduleLessons = new List<ScheduleLesson>();
+            ExtraLessons = new List<ExtraLesson>();
+            CanceledLessons = new List<CanceledLesson>();
+        }
     }
 }
