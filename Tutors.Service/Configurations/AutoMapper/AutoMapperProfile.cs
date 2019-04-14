@@ -5,6 +5,7 @@ using AutoMapper;
 using Dto = Tutors.Service.Dto;
 using Domain = Tutors.Domain;
 using System.Linq;
+using Tutors.Domain;
 
 namespace Tutors.Service.Configurations
 {
@@ -12,13 +13,13 @@ namespace Tutors.Service.Configurations
     {
         public AutoMapperProfile()
         {
-            CreateMap<Domain.Pupil, Dto.PupilInfo>()
-                .ForMember(o => o.OneHourPrice, m => m.MapFrom(s => _GetLessonPrice(s.PriceList, Domain.LessonDuration.OneHour)))
-                .ForMember(o => o.OneAndHalfPrice, m => m.MapFrom(s => _GetLessonPrice(s.PriceList, Domain.LessonDuration.OneAndHalf)))
-                .ForMember(o => o.TwoHourPrice, m => m.MapFrom(s => _GetLessonPrice(s.PriceList, Domain.LessonDuration.TwoHour)));
-            CreateMap<Dto.PupilInfo, Domain.Pupil>();
+            CreateMap<Pupil, Dto.PupilInfo>()
+                .ForMember(o => o.OneHourPrice, m => m.MapFrom(s => _GetLessonPrice(s.PriceList, LessonDuration.OneHour)))
+                .ForMember(o => o.OneAndHalfPrice, m => m.MapFrom(s => _GetLessonPrice(s.PriceList, LessonDuration.OneAndHalf)))
+                .ForMember(o => o.TwoHourPrice, m => m.MapFrom(s => _GetLessonPrice(s.PriceList, LessonDuration.TwoHour)));
+            CreateMap<Dto.PupilInfo, Pupil>();
 
-            CreateMap<Domain.Pupil, Dto.PupilInfoListItem>()
+            CreateMap<Pupil, Dto.PupilInfoListItem>()
                 .ForMember(o => o.Name, m => m.MapFrom(s => $"{s.FirstName} {s.LastName}".Trim()))
                 .ForMember(o => o.TimeInMonday, m => m.MapFrom(s => _GetTimeInDay(s.PupilSchedule, DayOfWeek.Monday)))
                 .ForMember(o => o.TimeInTuesday, m => m.MapFrom(s => _GetTimeInDay(s.PupilSchedule, DayOfWeek.Tuesday)))
@@ -28,10 +29,10 @@ namespace Tutors.Service.Configurations
                 .ForMember(o => o.TimeInSaturday, m => m.MapFrom(s => _GetTimeInDay(s.PupilSchedule, DayOfWeek.Saturday)))
                 .ForMember(o => o.TimeInSunday, m => m.MapFrom(s => _GetTimeInDay(s.PupilSchedule, DayOfWeek.Sunday)));
 
-            CreateMap<Domain.Schedule, Dto.Schedule>().ReverseMap();
-            CreateMap<Domain.ScheduleLesson, Dto.ScheduleLesson>().ReverseMap();
+            CreateMap<Schedule, Dto.Schedule>().ReverseMap();
+            CreateMap<ScheduleLesson, Dto.ScheduleLesson>().ReverseMap();
 
-            CreateMap<Domain.Lesson, Dto.LessonInfo>()
+            CreateMap<Lesson, Dto.LessonInfo>()
                 .ForMember(o => o.StartDate, m => m.MapFrom(s => s.LessonsDateTime))
                 .ForMember(o => o.StartDateStr, m => m.MapFrom(s => s.LessonsDateTime.ToString("dd.MM.yyyy HH:mm:ss")))
                 .ForMember(o => o.EndDate, m => m.MapFrom(s => s.LessonsFinishDateTime))
@@ -40,13 +41,13 @@ namespace Tutors.Service.Configurations
                 .ForMember(o => o.PupilName, m => m.MapFrom(s => $"{s.Pupil.FirstName} {s.Pupil.LastName}".Trim()));
 
 
-            CreateMap<Dto.InsertedLessonInfo, Domain.ExtraLesson>()
-                .ForMember(o => o.LessonsDuration, m => m.MapFrom(s => (Domain.LessonDuration)s.LessonsDuration));
+            CreateMap<Dto.InsertedLessonInfo, ExtraLesson>()
+                .ForMember(o => o.LessonsDuration, m => m.MapFrom(s => (LessonDuration)s.LessonsDuration));
 
         }
 
 
-        private Decimal? _GetLessonPrice(Dictionary<Domain.LessonDuration, Decimal> priceList, Domain.LessonDuration lessonsDuration)
+        private Decimal? _GetLessonPrice(Dictionary<LessonDuration, Decimal> priceList, LessonDuration lessonsDuration)
         {
             if (priceList.TryGetValue(lessonsDuration, out Decimal value))
                 return value;
@@ -60,7 +61,7 @@ namespace Tutors.Service.Configurations
         /// <param name="schedule"></param>
         /// <param name="dayOfWeek"></param>
         /// <returns></returns>
-        private string _GetTimeInDay(Domain.Schedule schedule, DayOfWeek dayOfWeek)
+        private string _GetTimeInDay(Schedule schedule, DayOfWeek dayOfWeek)
         {
             var lesson = schedule.ScheduleLessons.Where(p => p.LessonDay == dayOfWeek).FirstOrDefault();
             if (lesson == null)

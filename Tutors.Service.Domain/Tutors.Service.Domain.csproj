@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tutors.Dao.Abstract\Tutors.Dao.Abstract.csproj" />
+    <ProjectReference Include="..\Tutors.Domain\Tutors.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

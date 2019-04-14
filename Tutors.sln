@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2016
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutors.Service", "Tutors.Service\Tutors.Service.csproj", "{3F6F5258-8ACE-4F6A-BC3A-82325C07CF9B}"
 EndProject
@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutors.Domain", "Tutors.Dom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutors.Service.Dto", "Tutors.Service.Dto\Tutors.Service.Dto.csproj", "{7C8AAA00-4169-4C0C-B306-4CF2EF86F477}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutors.WebApi", "Tutors.WebApi\Tutors.WebApi.csproj", "{D1EBF74D-27C3-4962-93BC-A32FF75F11D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutors.WebApi", "Tutors.WebApi\Tutors.WebApi.csproj", "{D1EBF74D-27C3-4962-93BC-A32FF75F11D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutors.Dao.Abstract", "Tutors.Dao.Abstract\Tutors.Dao.Abstract.csproj", "{D3FEBB91-5DD2-4F8E-AE8D-F9FB477C8F96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutors.Dao.Abstract", "Tutors.Dao.Abstract\Tutors.Dao.Abstract.csproj", "{D3FEBB91-5DD2-4F8E-AE8D-F9FB477C8F96}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dao", "Dao", "{B54CCE39-3D04-46DF-85BA-6D8591748CCC}"
 EndProject
@@ -21,11 +21,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{7DF4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{97137166-70B6-44B1-A308-528C07FADCF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutors.Dao.Memory", "Tutors.Dao.Memory\Tutors.Dao.Memory.csproj", "{09118C1F-5CC8-43D7-B7DC-22111E694EAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutors.Dao.Memory", "Tutors.Dao.Memory\Tutors.Dao.Memory.csproj", "{09118C1F-5CC8-43D7-B7DC-22111E694EAB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Iocs", "Iocs", "{AE991B03-E8EA-4AB7-8374-3C54D26037BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutors.Iocs.AutofacConfigurator", "Tutors.Iocs.AutofacConfigurator\Tutors.Iocs.AutofacConfigurator.csproj", "{2C43493D-B4E6-4172-B103-36CB576C8093}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutors.Iocs.AutofacConfigurator", "Tutors.Iocs.AutofacConfigurator\Tutors.Iocs.AutofacConfigurator.csproj", "{2C43493D-B4E6-4172-B103-36CB576C8093}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutors.Service.Domain", "Tutors.Service.Domain\Tutors.Service.Domain.csproj", "{F2ABC54C-0D91-4B76-A965-9CEF571A6A2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{2C43493D-B4E6-4172-B103-36CB576C8093}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C43493D-B4E6-4172-B103-36CB576C8093}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C43493D-B4E6-4172-B103-36CB576C8093}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2ABC54C-0D91-4B76-A965-9CEF571A6A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2ABC54C-0D91-4B76-A965-9CEF571A6A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2ABC54C-0D91-4B76-A965-9CEF571A6A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2ABC54C-0D91-4B76-A965-9CEF571A6A2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +79,7 @@ Global
 		{D3FEBB91-5DD2-4F8E-AE8D-F9FB477C8F96} = {B54CCE39-3D04-46DF-85BA-6D8591748CCC}
 		{09118C1F-5CC8-43D7-B7DC-22111E694EAB} = {B54CCE39-3D04-46DF-85BA-6D8591748CCC}
 		{2C43493D-B4E6-4172-B103-36CB576C8093} = {AE991B03-E8EA-4AB7-8374-3C54D26037BC}
+		{F2ABC54C-0D91-4B76-A965-9CEF571A6A2F} = {7DE8B719-5378-4F01-B5D5-74A4E282C256}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB985139-C966-41D2-B3B8-03F596031827}

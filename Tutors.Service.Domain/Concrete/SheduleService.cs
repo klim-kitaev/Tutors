@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Tutors.Domain;
-using Tutors.Service.Abstract;
+using Tutors.Service.Domain.Abstract;
 
-namespace Tutors.Service.Concrete
+namespace Tutors.Service.Domain.Concrete
 {
     /// <summary>
     /// Сервис работы с расписанием
@@ -20,11 +19,11 @@ namespace Tutors.Service.Concrete
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <returns></returns>
-        public  List<Lesson> GetLessons(Pupil pupil, DateTime startDate, DateTime endDate)
+        public List<Lesson> GetLessons(Pupil pupil, DateTime startDate, DateTime endDate)
         {
             var lessons = GetSheduleLessons(pupil, startDate, endDate);
             lessons.AddRange(GetExtraLessons(pupil, startDate, endDate));
-            return lessons.OrderBy(p=>p.LessonsDateTime).ToList();
+            return lessons.OrderBy(p => p.LessonsDateTime).ToList();
         }
 
         /// <summary>
@@ -39,7 +38,7 @@ namespace Tutors.Service.Concrete
             var lessons = new List<Lesson>();
             var canceledLessons = pupil.PupilSchedule.CanceledLessons;
 
-            for (var dt = startDate.Date; dt <= endDate.Date; dt=dt.AddDays(1))
+            for (var dt = startDate.Date; dt <= endDate.Date; dt = dt.AddDays(1))
             {
                 var sheduleLessons = pupil.PupilSchedule.ScheduleLessons.Where(p => p.LessonDay == dt.DayOfWeek).ToList();
                 foreach (var slesson in sheduleLessons)
@@ -52,8 +51,8 @@ namespace Tutors.Service.Concrete
                         Price = pupil.PriceList.Where(p => p.Key == slesson.LessonsDuration).First().Value,
                         LessonInfoType = LessonInfoType.Planned
                     };
-                    if(!IsLessonCanceled(lesson,canceledLessons))
-                    lessons.Add(lesson);
+                    if (!IsLessonCanceled(lesson, canceledLessons))
+                        lessons.Add(lesson);
                 }
             }
             return lessons;
@@ -68,7 +67,7 @@ namespace Tutors.Service.Concrete
         /// <returns></returns>
         private List<Lesson> GetExtraLessons(Pupil pupil, DateTime startDate, DateTime endDate)
         {
-            return  pupil.PupilSchedule.ExtraLessons
+            return pupil.PupilSchedule.ExtraLessons
                 .Where(p => p.LessonsDateTime > startDate && p.LessonsDateTime.AddDays(1) < endDate)
                 .Select(p => new Lesson
                 {

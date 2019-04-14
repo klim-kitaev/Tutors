@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 using Tutors.Domain;
 
-namespace Tutors.Service.Abstract
+namespace Tutors.Service.Domain.Abstract
 {
     /// <summary>
     /// Интерфейс сервиса работы с расписанием

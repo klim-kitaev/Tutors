@@ -5,6 +5,8 @@ using Autofac;
 using Tutors.Dao.Abstract;
 using Tutors.Service.Abstract;
 using Tutors.Service.Concrete;
+using Tutors.Service.Domain.Abstract;
+using Tutors.Service.Domain.Concrete;
 using MemoryDao = Tutors.Dao.Memory;
 
 namespace Tutors.Iocs.AutofacConfigurator
@@ -16,6 +18,7 @@ namespace Tutors.Iocs.AutofacConfigurator
             builder.RegisterModule<MapperModule>();
             _RegisterDao(builder);
             _RegisterServices(builder);
+            _RegisterDomainServices(builder);
         }
 
         private void _RegisterDao(ContainerBuilder builder)
@@ -27,7 +30,14 @@ namespace Tutors.Iocs.AutofacConfigurator
         {
             builder.RegisterType<PupilService>().As<IPupilService>();
             builder.RegisterType<LessonService>().As<ILessonService>();
-            builder.RegisterType<SheduleService>().As<ISheduleService>();
         }
+
+        private void _RegisterDomainServices(ContainerBuilder builder)
+        {
+            builder.RegisterType<SheduleService>().As<ISheduleService>();
+            builder.RegisterType<PupilDomainService>().As<IPupilDomainService>();
+            builder.RegisterType<LessonDomainService>().As<ILessonDomainService>();
+        }
+
     }
 }
