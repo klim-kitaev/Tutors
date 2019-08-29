@@ -7,9 +7,8 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Autofac.Extensions.DependencyInjection;
 
-namespace Tutors.WebApi
+namespace IdentityServer
 {
     public class Program
     {
@@ -20,8 +19,10 @@ namespace Tutors.WebApi
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .ConfigureServices(services => services.AddAutofac())
-                .UseUrls("http://localhost:5001")
+                .UseKestrel()
+                .UseUrls("http://localhost:5000")
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIISIntegration()
                 .UseStartup<Startup>();
     }
 }

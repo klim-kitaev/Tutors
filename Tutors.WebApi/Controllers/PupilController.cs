@@ -7,19 +7,19 @@ using Microsoft.AspNetCore.Mvc;
 using Tutors.Service.Abstract;
 using Tutors.Service.Dto;
 
+
 namespace Tutors.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PupilController : ControllerBase
+    public class PupilController : BaseController
     {
         private readonly IPupilService _pupilService;
-        private readonly int userId = 1;
 
         public PupilController(IPupilService pupilService)
         {
             _pupilService = pupilService ?? throw new ArgumentNullException(nameof(pupilService));
-        }
+        }        
 
         /// <summary>
         /// Получить список учеников
@@ -29,6 +29,7 @@ namespace Tutors.WebApi.Controllers
         [ProducesResponseType(200)]
         public async Task<ActionResult<List<PupilInfoListItem>>> Get()
         {
+            int userId = GetUserId();
             return await _pupilService.GetPupils(userId);
         }
 
@@ -43,7 +44,12 @@ namespace Tutors.WebApi.Controllers
         public async Task<ActionResult<PupilInfo>> Get(int id)
         {
             if (id == 0)
+            {
                 return BadRequest();
+            }
+                
+
+            int userId = GetUserId();
 
             return await _pupilService.GetPupilInfo(id, userId);
         }
@@ -59,7 +65,16 @@ namespace Tutors.WebApi.Controllers
         public async Task<ActionResult<PupilInfo>>Save(PupilInfo pupil)
         {
             if (pupil == null)
+            {
                 return BadRequest();
+            }
+                
+
+            int userId = GetUserId();
+            if(userId == 0)
+            {
+                return pupil;
+            }
 
             return await _pupilService.SavePupilInfo(pupil, userId);
         }
@@ -75,7 +90,16 @@ namespace Tutors.WebApi.Controllers
         public async Task<ActionResult<PupilInfo>>Delete(int id)
         {
             if (id == 0)
+            {
                 return BadRequest();
+            }
+                
+
+            int userId = GetUserId();
+            if (userId == 0)
+            {
+                return BadRequest();
+            }
 
             return await _pupilService.DeletePupilInfo(id, userId);
         }

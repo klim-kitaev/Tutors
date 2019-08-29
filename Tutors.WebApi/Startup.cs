@@ -15,6 +15,8 @@ using NJsonSchema;
 using NSwag.AspNetCore;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
+using IdentityServer4.AccessTokenValidation;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace Tutors.WebApi
 {
@@ -39,6 +41,19 @@ namespace Tutors.WebApi
                     options.SerializerSettings.Culture = new CultureInfo("ru-RU");
                 }); 
             services.AddSwaggerDocument();
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme =
+                                           JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme =
+                                           JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(o =>
+            {
+                o.Authority = "http://localhost:5000";
+                o.Audience = "api1";
+                o.RequireHttpsMetadata = false;
+            });
 
             services.Configure<RequestLocalizationOptions>(options =>
             {
@@ -65,8 +80,10 @@ namespace Tutors.WebApi
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddConsole(LogLevel.Debug);
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -76,6 +93,9 @@ namespace Tutors.WebApi
             app.UseCors(builder => builder.WithOrigins("http://localhost:4200")
                                             .AllowAnyHeader()
                                             .AllowAnyMethod());
+
+            // добавляем middleware для заполнения объекта пользователя из OpenId  Connect JWT-токенов
+            app.UseAuthentication();
 
             app.UseMvc();
         }

@@ -11,9 +11,8 @@ namespace Tutors.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LessonsController : ControllerBase
+    public class LessonsController : BaseController
     {
-        private readonly int userId = 1;
         private readonly ILessonService _lessonService;
 
         public LessonsController(ILessonService lessonService)
@@ -33,6 +32,7 @@ namespace Tutors.WebApi.Controllers
         [ProducesResponseType(200)]
         public async Task<ActionResult<List<LessonInfo>>>Get(DateTime startDate, DateTime endDate)
         {
+            int userId = GetUserId();
             return await _lessonService.GetLessons(startDate, endDate, userId);
         }
 
@@ -45,7 +45,11 @@ namespace Tutors.WebApi.Controllers
         [ProducesResponseType(200)]
         public async Task<ActionResult> ChangeLessons(ChangeLessonInfo lessonInfo)
         {
-            await _lessonService.ChangeLessons(lessonInfo);
+            int userId = GetUserId();
+            if(userId >0)
+            {
+                await _lessonService.ChangeLessons(lessonInfo);
+            }           
             return Ok();
         }
     }
