@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tutors.Dao.Memory\Tutors.Dao.Memory.csproj" />
+    <ProjectReference Include="..\Tutors.Dao.Mongo\Tutors.Dao.Mongo.csproj" />
     <ProjectReference Include="..\Tutors.Service\Tutors.Service.csproj" />
   </ItemGroup>
 

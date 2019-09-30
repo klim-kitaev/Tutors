@@ -22,6 +22,11 @@ namespace Tutors.WebApi
             WebHost.CreateDefaultBuilder(args)
                 .ConfigureServices(services => services.AddAutofac())
                 .UseUrls("http://localhost:5001")
+                //.ConfigureLogging(logging =>
+                //{
+                //    logging.ClearProviders();
+                //    logging.AddConsole();
+                //})
                 .UseStartup<Startup>();
     }
 }

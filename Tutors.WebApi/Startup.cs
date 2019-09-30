@@ -76,7 +76,7 @@ namespace Tutors.WebApi
         // "Without ConfigureContainer" mechanism shown later.
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            builder.RegisterModule(new AssemblyModule());
+            builder.RegisterModule(new AssemblyModule(Configuration));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
