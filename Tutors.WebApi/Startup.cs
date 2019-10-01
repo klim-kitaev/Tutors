@@ -17,6 +17,7 @@ using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using AutofacSerilogIntegration;
 
 namespace Tutors.WebApi
 {
@@ -77,12 +78,13 @@ namespace Tutors.WebApi
         public void ConfigureContainer(ContainerBuilder builder)
         {
             builder.RegisterModule(new AssemblyModule(Configuration));
+            builder.RegisterLogger();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole(LogLevel.Debug);
+            //loggerFactory.AddConsole(LogLevel.Debug);
 
             if (env.IsDevelopment())
             {
