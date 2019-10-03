@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+
+  <button mat-button routerLink="/">
+  <mat-icon>home</mat-icon> 
+      {{title}}</button>
+      <button mat-button routerLink="/pupils">Список учеников</button>
+      <button mat-button routerLink="/calendar">Расписание</button>
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-remaining-space"></span>
+  <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+    <div *ngIf="!IsAuth">
+        <button mat-button (click)="login()">Login</button>
+    </div>
+    <div *ngIf="IsAuth">
+        {{name}}<button mat-button (click)="logout()">Logout</button>
+    </div>        
+  </div>
+  <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+   <mat-icon>menu</mat-icon>
+  </button>
+
+</mat-toolbar>
+<mat-menu x-position="before" #menu="matMenu">
+  <button mat-menu-item routerLink="/pupils">Список учеников</button>
+  <button mat-menu-item routerLink="/calendar">Расписание</button>
+  <!--<button mat-menu-item>Help</button>-->
+</mat-menu>
+<router-outlet></router-outlet>

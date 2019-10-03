@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+}
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.dayofweek{
+    width: 10%;
+}
+
+.weekend{
+    color: brown;
+}
+.add-batton-pannel{
+    padding: 5px;
+}

@@ -1,0 +1,58 @@
+<div fxLayout="row" fxLayoutAlign="space-between center">
+    <div fxLayout="row">
+      <div class="btn-group">
+          <button mat-mini-fab color="primary"
+          mwlCalendarPreviousView
+          [view]="view"
+          [(viewDate)]="viewDate"
+          (viewDateChange)="viewDateChange.next(viewDate)"
+          [matTooltip]="prevLabel"
+          ><mat-icon>chevron_left</mat-icon></button>
+        <button mat-mini-fab color="primary"
+          mwlCalendarToday
+          [(viewDate)]="viewDate"
+          (viewDateChange)="viewDateChange.next(viewDate)"
+          matTooltip="Сегодня"
+        >
+        <mat-icon>today</mat-icon>
+      </button>
+        <button mat-mini-fab color="primary"
+          mwlCalendarNextView
+          [view]="view"
+          [(viewDate)]="viewDate"
+          (viewDateChange)="viewDateChange.next(viewDate)"
+          [matTooltip]="nextLabel"
+        >
+        <mat-icon>chevron_right</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):locale : weekStartsOn }}</h3>
+    </div>
+    <div fxLayout="row">
+      <div class="btn-group">
+        <button
+        mat-raised-button
+          (click)="view = viewChange.emit('month')"
+          [class.mat-primary]="view === 'month'"
+        >
+          Месяц
+        </button>
+        <button
+        mat-raised-button
+          (click)="view = viewChange.emit('week')"
+          [class.mat-primary]="view === 'week'"
+        >
+          Неделя
+        </button>
+        <button
+        mat-raised-button
+          (click)="view = viewChange.emit('day')"
+          [class.mat-primary]="view === 'day'"
+        >
+          День
+        </button>
+      </div>
+    </div>
+  </div>

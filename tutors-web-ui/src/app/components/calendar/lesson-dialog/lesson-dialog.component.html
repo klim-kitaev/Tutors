@@ -1,0 +1,43 @@
+<!-- <p>
+  {{data | json}}
+</p> -->
+<div class="dialog-wrapper">
+  <button mat-icon-button id="close_button" (click)="closeDialog()"><mat-icon>close</mat-icon></button>
+  <h2>{{title}}</h2>
+  <form [formGroup]="lessonForm" >
+    <p>
+        <mat-form-field>
+            <mat-select formControlName="pupilId" placeholder="Имя ученика" [disabled]="!isNew" >
+              <mat-option *ngFor="let pupil of pupils" [value]="pupil.Id">{{pupil.Name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </p>
+    <p>
+      <input type="hidden" formControlName="lessonsDate"/>
+      <mat-form-field>
+        <input matInput [matDatepicker]="pickerDate" placeholder="Дата занятий" formControlName="lessonsDate">
+        <mat-datepicker-toggle matSuffix [for]="pickerDate"></mat-datepicker-toggle>
+        <mat-datepicker #pickerDate></mat-datepicker>
+      </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <input matInput [ngxTimepicker]="picker" placeholder="Время занятий" formControlName="lessonsTime" [format]="24">
+            <ngx-material-timepicker #picker></ngx-material-timepicker>
+         </mat-form-field>
+    </p>
+  <p>
+      <mat-form-field>
+          <mat-select formControlName="lessonsDuration" placeholder="Продолжительность уроков">
+            <mat-option *ngFor="let lessonsDuration of lessonsDurations" [value]="lessonsDuration.Id">{{lessonsDuration.Name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+  </p>
+  </form>
+  
+  <div class="dialog-button-block">
+    <button mat-raised-button  color="primary"  [disabled]="!lessonForm.valid" (click)="saveLesson()">{{isNew ? 'Добавить':'Изменить'}}</button>
+    <button mat-raised-button  color="warn" *ngIf="!isNew" (click)="deleteLesson()">Удалить</button>
+  </div>
+</div>
+

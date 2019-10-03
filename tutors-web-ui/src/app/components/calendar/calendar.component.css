@@ -1,0 +1,29 @@
+h3 {
+    margin: 0 0 10px;
+  }
+  
+  pre {
+    background-color: #f5f5f5;
+    padding: 15px;
+  }
+
+  .week-title-block{
+    float: left;
+  }
+
+  .week-title{
+    font-size: 12px;
+    background-color: #d1e8ff;
+    border: 1px solid #1e90ff;
+    color: #1e90ff;
+    margin: 10px;
+    padding: 3px 5px;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .week-title.in-past{
+    background-color: #ddd;
+    color: #bbb;
+    border-color: #999;
+  }

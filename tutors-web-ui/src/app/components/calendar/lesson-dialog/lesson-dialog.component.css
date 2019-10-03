@@ -1,0 +1,15 @@
+.dialog-wrapper{
+    position: relative;
+    width: 100%;
+}
+
+
+#close_button{
+    position: absolute;
+    top: -40px;
+    right: -20px;
+}
+
+.dialog-button-block button {
+  margin-right: 8px;
+}

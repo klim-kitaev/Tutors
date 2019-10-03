@@ -1,0 +1,60 @@
+<h1 class="mat-h1">Расписание</h1>
+<app-calendar-header
+  [(view)]="view"
+  [(viewDate)]="viewDate"
+  [locale]="locale"
+  [weekStartsOn]="weekStartsOn"
+  (viewDateChange)="fetchLessons()"
+  (viewChange)="fetchLessons()"
+></app-calendar-header>
+<br />
+{{viewDate}}<br/>
+<div [ngSwitch]="view">
+  <mwl-calendar-month-view
+    *ngSwitchCase="CalendarView.Month"
+    [viewDate]="viewDate"
+    [events]="events"
+    [refresh]="refresh"
+    [locale]="locale"
+    [weekStartsOn]="weekStartsOn"
+    [cellTemplate]="customCellTemplate"
+    (dayClicked)="dayClick($event.day)"
+  >
+  </mwl-calendar-month-view>
+  <mwl-calendar-week-view
+    *ngSwitchCase="CalendarView.Week"
+    [viewDate]="viewDate"
+    [events]="events"
+    [refresh]="refresh"
+    [locale]="locale"
+    [weekStartsOn]="weekStartsOn"
+    (eventClicked)="showEvent($event.event)"
+    (dayHeaderClicked)="dayClick($event.day)"
+  >
+  </mwl-calendar-week-view>
+  <mwl-calendar-day-view
+    *ngSwitchCase="CalendarView.Day"
+    [viewDate]="viewDate"
+    [events]="events"
+    [refresh]="refresh"
+    [locale]="locale"
+    (eventClicked)="showEvent($event.event)"
+    (hourSegmentClicked)="hourClick($event.date)"
+  >
+  </mwl-calendar-day-view>
+</div>
+<div fxLayout="row-reverse" class="add-batton-pannel">
+    <button mat-fab color="primary" (click)="addLesson()"><mat-icon>add</mat-icon></button>
+</div>
+
+<ng-template #customCellTemplate let-day="day" let-locale="locale">
+  <div class="cal-cell-top">
+    <div class="week-title-block">
+      <div *ngFor="let dayEvent of day.events" [ngClass]="setEventClass(dayEvent.start)" class="week-title" (click)="showMonthEvent($event,dayEvent)">
+        {{ dayEvent.title }}
+      </div>
+    </div>
+
+    <div class="cal-day-number">{{ day.date | calendarDate:'monthViewDayNumber':locale }}</div>
+  </div>
+</ng-template>

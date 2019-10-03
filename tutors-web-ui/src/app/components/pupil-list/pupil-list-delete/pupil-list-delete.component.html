@@ -1,0 +1,9 @@
+<h2 mat-dialog-title class="mat-warn">Подтвержение удаления</h2>
+<mat-dialog-content>
+  Вы действительно хотите удалить ученика:
+  {{data.name}}?
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="delete(data.id)" color="warn">Ok</button>
+  <button mat-raised-button (click)="closeDialog()">Отмена</button>
+</mat-dialog-actions>

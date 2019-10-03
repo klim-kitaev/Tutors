@@ -1,0 +1,29 @@
+.pupil-info-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.pupil-info-field-full{
+    width: 100%;
+}
+
+.pupil-info-field-half{
+    width: 50%;
+}
+.info-block{
+
+}
+.dialog-button-block{
+
+}
+
+.dialog-button-block button{
+    margin-right: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}

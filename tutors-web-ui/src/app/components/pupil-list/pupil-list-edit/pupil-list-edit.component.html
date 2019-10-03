@@ -1,0 +1,69 @@
+<form [formGroup]="pupilForm"  class="pupil-info-form">
+<div class="info-block">
+  <mat-tab-group>
+    <mat-tab label="Инфо">
+      <p class="mt20">
+        <mat-form-field class="pupil-info-field-full">
+            <input matInput placeholder="Имя*" formControlName="firstName">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="pupil-info-field-full">
+            <input matInput placeholder="Фамилия" formControlName="lastName">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="pupil-info-field-half">
+          <input matInput placeholder="Цена урока за час*" type="number" class="example-right-align" formControlName="oneHourPrice">
+          <span matSuffix>.00 руб.</span>      
+        </mat-form-field>
+        <button mat-icon-button (click)="calcPrice()"><mat-icon>autorenew</mat-icon></button>
+      </p>
+      <p>
+        <mat-form-field class="pupil-info-field-half">
+            <input matInput placeholder="Цена урока за полтора часа*" type="number" class="example-right-align" formControlName="oneAndHalfPrice">
+            <span matSuffix>.00 руб.</span>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="pupil-info-field-half">
+              <input matInput placeholder="Цена урока за два часа*" type="number" class="example-right-align" formControlName="twoHourPrice">
+              <span matSuffix>.00 руб.</span>
+        </mat-form-field>
+      </p>
+    </mat-tab>
+  <mat-tab label="Регулярное расписание">
+    <div class="change-z-index">
+      <h2 class="mat-h2 mt20">График занятий ученика&nbsp;<button mat-mini-fab color="primary" (click)="addSchedule()"><mat-icon>add</mat-icon></button></h2>
+      <div formGroupName="pupilSchedule">
+          <div formArrayName="scheduleLessons">
+              <p *ngFor="let schedule of scheduleLessons.controls; let i=index" formGroupName="{{i}}">
+                  <mat-form-field>
+                    <mat-select formControlName="lessonDay" placeholder="День недели">
+                      <mat-option *ngFor="let dayOfWeek of dayOfWeeks" [value]="dayOfWeek.Id">{{dayOfWeek.Name}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                 <mat-form-field>
+                    <input matInput [ngxTimepicker]="picker" placeholder="Время занятий" formControlName="lessonTime" [format]="24">
+                    <ngx-material-timepicker #picker></ngx-material-timepicker>
+                 </mat-form-field>
+                 <mat-form-field>
+                    <mat-select formControlName="lessonsDuration" placeholder="Продолжительность уроков">
+                      <mat-option *ngFor="let lessonsDuration of lessonsDurations" [value]="lessonsDuration.Id">{{lessonsDuration.Name}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </p>
+          </div>
+      </div>
+    </div>
+  </mat-tab>
+  </mat-tab-group>
+</div>
+<div class="dialog-button-block">
+  <button mat-raised-button (click)="save()" color="primary" [disabled]="!pupilForm.valid">Сохранить</button>
+  <button mat-raised-button (click)="closeDialog()">Отмена</button>
+</div>
+</form>
+<!-- <p>
+  {{pupilForm.value | json}}
+</p> -->
