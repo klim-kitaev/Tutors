@@ -1,0 +1,352 @@
+2019-10-08 21:33:39.745 +03:00 [INF] User profile is available. Using 'C:\Users\klimk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-08 21:49:44.983 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5001/api/pupil  
+2019-10-08 21:49:45.077 +03:00 [INF] CORS policy execution successful.
+2019-10-08 21:49:45.214 +03:00 [INF] Request finished in 232.801ms 204 
+2019-10-08 21:49:45.346 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/pupil application/json 
+2019-10-08 21:49:45.347 +03:00 [INF] CORS policy execution successful.
+2019-10-08 21:49:45.701 +03:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token: undefined
+2019-10-08 21:49:45.738 +03:00 [INF] Executing endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 21:49:45.767 +03:00 [INF] Route matched with {action = "Get", controller = "Pupil"}. Executing action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)
+2019-10-08 21:49:46.125 +03:00 [INF] Executing action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) - Validation state: "Valid"
+2019-10-08 21:49:46.608 +03:00 [INF] Executed action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 472.1711ms.
+2019-10-08 21:49:46.622 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Tutors.Service.Dto.PupilInfoListItem, Tutors.Service.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-08 21:49:46.639 +03:00 [INF] Executed action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) in 866.4914ms
+2019-10-08 21:49:46.643 +03:00 [INF] Executed endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 21:49:46.659 +03:00 [INF] Request finished in 1312.8041ms 200 application/json; charset=utf-8
+2019-10-08 22:03:06.185 +03:00 [INF] User profile is available. Using 'C:\Users\klimk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-08 22:05:05.188 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5001/api/pupil  
+2019-10-08 22:05:05.305 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:05:05.347 +03:00 [INF] Request finished in 160.9969ms 204 
+2019-10-08 22:05:05.446 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/pupil application/json 
+2019-10-08 22:05:05.449 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:05:05.743 +03:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token: undefined
+2019-10-08 22:05:05.787 +03:00 [INF] Executing endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:05:05.813 +03:00 [INF] Route matched with {action = "Get", controller = "Pupil"}. Executing action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)
+2019-10-08 22:05:06.178 +03:00 [INF] Executing action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) - Validation state: "Valid"
+2019-10-08 22:05:06.198 +03:00 [INF] Get UserID 0
+2019-10-08 22:05:06.587 +03:00 [INF] Executed action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 398.35ms.
+2019-10-08 22:05:06.603 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Tutors.Service.Dto.PupilInfoListItem, Tutors.Service.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-08 22:05:06.624 +03:00 [INF] Executed action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) in 803.66950000000008ms
+2019-10-08 22:05:06.634 +03:00 [INF] Executed endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:05:06.646 +03:00 [INF] Request finished in 1199.7445ms 200 application/json; charset=utf-8
+2019-10-08 22:05:24.587 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5001/api/pupil  
+2019-10-08 22:05:24.595 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:05:24.597 +03:00 [INF] Request finished in 10.031ms 204 
+2019-10-08 22:05:24.624 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/pupil application/json 
+2019-10-08 22:05:24.626 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:05:24.730 +03:00 [INF] Successfully validated the token.
+2019-10-08 22:05:24.742 +03:00 [INF] Executing endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:05:24.748 +03:00 [INF] Route matched with {action = "Get", controller = "Pupil"}. Executing action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)
+2019-10-08 22:05:24.780 +03:00 [INF] Executing action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) - Validation state: "Valid"
+2019-10-08 22:05:24.786 +03:00 [INF] Get UserID 1
+2019-10-08 22:05:24.814 +03:00 [INF] Executed action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 28.969800000000003ms.
+2019-10-08 22:05:24.818 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Tutors.Service.Dto.PupilInfoListItem, Tutors.Service.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-08 22:05:24.821 +03:00 [INF] Executed action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) in 69.602ms
+2019-10-08 22:05:24.825 +03:00 [INF] Executed endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:05:24.828 +03:00 [INF] Request finished in 203.5147ms 200 application/json; charset=utf-8
+2019-10-08 22:12:27.406 +03:00 [INF] User profile is available. Using 'C:\Users\klimk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-08 22:12:45.991 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5001/api/pupil  
+2019-10-08 22:12:46.084 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:12:46.116 +03:00 [INF] Request finished in 127.7166ms 204 
+2019-10-08 22:12:46.177 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/pupil application/json 
+2019-10-08 22:12:46.179 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:12:46.708 +03:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token: undefined
+2019-10-08 22:12:46.780 +03:00 [INF] Executing endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:12:46.806 +03:00 [INF] Route matched with {action = "Get", controller = "Pupil"}. Executing action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)
+2019-10-08 22:12:47.154 +03:00 [INF] Executing action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) - Validation state: "Valid"
+2019-10-08 22:12:47.172 +03:00 [INF] Get UserID 0
+2019-10-08 22:12:47.604 +03:00 [INF] Executed action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 439.9666ms.
+2019-10-08 22:12:47.618 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Tutors.Service.Dto.PupilInfoListItem, Tutors.Service.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-08 22:12:47.633 +03:00 [INF] Executed action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) in 822.9438ms
+2019-10-08 22:12:47.638 +03:00 [INF] Executed endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:12:47.650 +03:00 [INF] Request finished in 1473.1231ms 200 application/json; charset=utf-8
+2019-10-08 22:13:14.525 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5001/api/pupil  
+2019-10-08 22:13:14.528 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:13:14.530 +03:00 [INF] Request finished in 5.5645ms 204 
+2019-10-08 22:13:14.547 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/api/pupil application/json 223
+2019-10-08 22:13:14.550 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:13:14.555 +03:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token: undefined
+2019-10-08 22:13:14.559 +03:00 [INF] Executing endpoint 'Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi)'
+2019-10-08 22:13:14.574 +03:00 [INF] Route matched with {action = "Save", controller = "Pupil"}. Executing action Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi)
+2019-10-08 22:13:14.640 +03:00 [INF] Executing action method Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi) with arguments (["Tutors.Service.Dto.PupilInfo"]) - Validation state: "Valid"
+2019-10-08 22:13:29.312 +03:00 [INF] Save PupilInfo 0 Ярослав Китаев
+2019-10-08 22:13:29.318 +03:00 [INF] Get UserID 0
+2019-10-08 22:13:29.321 +03:00 [INF] Executed action method Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 14671.0588ms.
+2019-10-08 22:13:29.328 +03:00 [INF] Executing ObjectResult, writing value of type 'Tutors.Service.Dto.PupilInfo'.
+2019-10-08 22:13:29.336 +03:00 [INF] Executed action Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi) in 14757.894600000001ms
+2019-10-08 22:13:29.340 +03:00 [INF] Executed endpoint 'Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi)'
+2019-10-08 22:13:29.343 +03:00 [INF] Request finished in 14796.7561ms 200 application/json; charset=utf-8
+2019-10-08 22:13:29.766 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5001/api/pupil  
+2019-10-08 22:13:29.769 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:13:29.771 +03:00 [INF] Request finished in 5.6348ms 204 
+2019-10-08 22:13:29.777 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/pupil application/json 
+2019-10-08 22:13:29.779 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:13:29.782 +03:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token: undefined
+2019-10-08 22:13:29.786 +03:00 [INF] Executing endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:13:29.792 +03:00 [INF] Route matched with {action = "Get", controller = "Pupil"}. Executing action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)
+2019-10-08 22:13:29.813 +03:00 [INF] Executing action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) - Validation state: "Valid"
+2019-10-08 22:13:29.816 +03:00 [INF] Get UserID 0
+2019-10-08 22:13:29.831 +03:00 [INF] Executed action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 14.445300000000001ms.
+2019-10-08 22:13:29.834 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Tutors.Service.Dto.PupilInfoListItem, Tutors.Service.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-08 22:13:29.837 +03:00 [INF] Executed action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) in 42.4435ms
+2019-10-08 22:13:29.842 +03:00 [INF] Executed endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:13:29.847 +03:00 [INF] Request finished in 69.8003ms 200 application/json; charset=utf-8
+2019-10-08 22:31:26.785 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5001/api/pupil  
+2019-10-08 22:31:26.818 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:31:26.826 +03:00 [INF] Request finished in 40.8967ms 204 
+2019-10-08 22:31:26.862 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/pupil application/json 
+2019-10-08 22:31:26.883 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:31:26.886 +03:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token: undefined
+2019-10-08 22:31:26.893 +03:00 [INF] Executing endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:31:26.895 +03:00 [INF] Route matched with {action = "Get", controller = "Pupil"}. Executing action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)
+2019-10-08 22:31:26.920 +03:00 [INF] Executing action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) - Validation state: "Valid"
+2019-10-08 22:31:26.924 +03:00 [INF] Get UserID 0
+2019-10-08 22:31:26.983 +03:00 [INF] Executed action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 59.688500000000005ms.
+2019-10-08 22:31:26.997 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Tutors.Service.Dto.PupilInfoListItem, Tutors.Service.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-08 22:31:26.999 +03:00 [INF] Executed action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) in 101.0155ms
+2019-10-08 22:31:27.005 +03:00 [INF] Executed endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:31:27.010 +03:00 [INF] Request finished in 147.7997ms 200 application/json; charset=utf-8
+2019-10-08 22:32:00.508 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5001/api/pupil  
+2019-10-08 22:32:00.512 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:32:00.522 +03:00 [INF] Request finished in 13.7282ms 204 
+2019-10-08 22:32:00.530 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/api/pupil application/json 223
+2019-10-08 22:32:00.535 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:32:00.539 +03:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token: undefined
+2019-10-08 22:32:00.543 +03:00 [INF] Executing endpoint 'Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi)'
+2019-10-08 22:32:00.547 +03:00 [INF] Route matched with {action = "Save", controller = "Pupil"}. Executing action Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi)
+2019-10-08 22:32:00.570 +03:00 [INF] Executing action method Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi) with arguments (["Tutors.Service.Dto.PupilInfo"]) - Validation state: "Valid"
+2019-10-08 22:32:02.991 +03:00 [INF] Save PupilInfo 0 Ярослав Китаев
+2019-10-08 22:32:05.325 +03:00 [INF] Get UserID 0
+2019-10-08 22:32:13.388 +03:00 [INF] Executed action method Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 12812.7008ms.
+2019-10-08 22:32:13.395 +03:00 [INF] Executing ObjectResult, writing value of type 'Tutors.Service.Dto.PupilInfo'.
+2019-10-08 22:32:13.413 +03:00 [INF] Executed action Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi) in 12862.2731ms
+2019-10-08 22:32:13.420 +03:00 [INF] Executed endpoint 'Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi)'
+2019-10-08 22:32:13.427 +03:00 [INF] Request finished in 12896.7815ms 200 application/json; charset=utf-8
+2019-10-08 22:32:13.873 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5001/api/pupil  
+2019-10-08 22:32:13.876 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:32:13.878 +03:00 [INF] Request finished in 5.3018ms 204 
+2019-10-08 22:32:13.884 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/pupil application/json 
+2019-10-08 22:32:13.886 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:32:13.888 +03:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token: undefined
+2019-10-08 22:32:13.891 +03:00 [INF] Executing endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:32:13.898 +03:00 [INF] Route matched with {action = "Get", controller = "Pupil"}. Executing action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)
+2019-10-08 22:32:13.924 +03:00 [INF] Executing action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) - Validation state: "Valid"
+2019-10-08 22:32:13.928 +03:00 [INF] Get UserID 0
+2019-10-08 22:32:13.933 +03:00 [INF] Executed action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5.567ms.
+2019-10-08 22:32:13.937 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Tutors.Service.Dto.PupilInfoListItem, Tutors.Service.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-08 22:32:13.940 +03:00 [INF] Executed action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) in 36.771100000000004ms
+2019-10-08 22:32:13.945 +03:00 [INF] Executed endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:32:13.947 +03:00 [INF] Request finished in 63.6657ms 200 application/json; charset=utf-8
+2019-10-08 22:32:19.143 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5001/api/pupil  
+2019-10-08 22:32:19.164 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:32:19.167 +03:00 [INF] Request finished in 23.4734ms 204 
+2019-10-08 22:32:19.195 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/pupil application/json 
+2019-10-08 22:32:19.197 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:32:19.200 +03:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token: undefined
+2019-10-08 22:32:19.203 +03:00 [INF] Executing endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:32:19.208 +03:00 [INF] Route matched with {action = "Get", controller = "Pupil"}. Executing action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)
+2019-10-08 22:32:19.235 +03:00 [INF] Executing action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) - Validation state: "Valid"
+2019-10-08 22:32:19.237 +03:00 [INF] Get UserID 0
+2019-10-08 22:32:19.242 +03:00 [INF] Executed action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.2723ms.
+2019-10-08 22:32:19.246 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Tutors.Service.Dto.PupilInfoListItem, Tutors.Service.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-08 22:32:19.249 +03:00 [INF] Executed action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) in 38.4133ms
+2019-10-08 22:32:19.255 +03:00 [INF] Executed endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:32:19.259 +03:00 [INF] Request finished in 63.1067ms 200 application/json; charset=utf-8
+2019-10-08 22:32:37.474 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5001/api/pupil  
+2019-10-08 22:32:37.513 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:32:37.541 +03:00 [INF] Request finished in 67.4759ms 204 
+2019-10-08 22:32:37.651 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/pupil application/json 
+2019-10-08 22:32:37.653 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:32:37.658 +03:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token: undefined
+2019-10-08 22:32:37.662 +03:00 [INF] Executing endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:32:37.665 +03:00 [INF] Route matched with {action = "Get", controller = "Pupil"}. Executing action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)
+2019-10-08 22:32:37.689 +03:00 [INF] Executing action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) - Validation state: "Valid"
+2019-10-08 22:32:44.731 +03:00 [INF] Get UserID 0
+2019-10-08 22:32:44.755 +03:00 [INF] Executed action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 7062.7874ms.
+2019-10-08 22:32:44.762 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Tutors.Service.Dto.PupilInfoListItem, Tutors.Service.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-08 22:32:44.766 +03:00 [INF] Executed action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) in 7097.9126000000006ms
+2019-10-08 22:32:44.772 +03:00 [INF] Executed endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:32:44.783 +03:00 [INF] Request finished in 7131.9366ms 200 application/json; charset=utf-8
+2019-10-08 22:32:52.342 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5001/api/pupil  
+2019-10-08 22:32:52.356 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:32:52.358 +03:00 [INF] Request finished in 15.3816ms 204 
+2019-10-08 22:32:52.418 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/pupil application/json 
+2019-10-08 22:32:52.420 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:32:52.421 +03:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token: undefined
+2019-10-08 22:32:52.423 +03:00 [INF] Executing endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:32:52.425 +03:00 [INF] Route matched with {action = "Get", controller = "Pupil"}. Executing action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)
+2019-10-08 22:32:52.452 +03:00 [INF] Executing action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) - Validation state: "Valid"
+2019-10-08 22:32:56.029 +03:00 [INF] Get UserID 0
+2019-10-08 22:32:56.046 +03:00 [INF] Executed action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3591.0218ms.
+2019-10-08 22:32:56.048 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Tutors.Service.Dto.PupilInfoListItem, Tutors.Service.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-08 22:32:56.051 +03:00 [INF] Executed action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) in 3624.5295ms
+2019-10-08 22:32:56.056 +03:00 [INF] Executed endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:32:56.059 +03:00 [INF] Request finished in 3640.8805ms 200 application/json; charset=utf-8
+2019-10-08 22:33:13.857 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5001/api/pupil  
+2019-10-08 22:33:13.861 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:33:13.863 +03:00 [INF] Request finished in 6.1217ms 204 
+2019-10-08 22:33:13.982 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/pupil application/json 
+2019-10-08 22:33:13.987 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:33:14.050 +03:00 [INF] Successfully validated the token.
+2019-10-08 22:33:14.052 +03:00 [INF] Executing endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:33:14.054 +03:00 [INF] Route matched with {action = "Get", controller = "Pupil"}. Executing action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)
+2019-10-08 22:33:14.077 +03:00 [INF] Executing action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) - Validation state: "Valid"
+2019-10-08 22:33:14.081 +03:00 [INF] Get UserID 1
+2019-10-08 22:33:14.088 +03:00 [INF] Executed action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.596ms.
+2019-10-08 22:33:14.091 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Tutors.Service.Dto.PupilInfoListItem, Tutors.Service.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-08 22:33:14.092 +03:00 [INF] Executed action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) in 36.5367ms
+2019-10-08 22:33:14.094 +03:00 [INF] Executed endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-08 22:33:14.097 +03:00 [INF] Request finished in 115.5728ms 200 application/json; charset=utf-8
+2019-10-08 22:33:44.797 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5001/api/pupil  
+2019-10-08 22:33:44.801 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:33:44.803 +03:00 [INF] Request finished in 6.0742ms 204 
+2019-10-08 22:33:44.809 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/api/pupil application/json 223
+2019-10-08 22:33:44.813 +03:00 [INF] CORS policy execution successful.
+2019-10-08 22:33:44.818 +03:00 [INF] Successfully validated the token.
+2019-10-08 22:33:44.819 +03:00 [INF] Executing endpoint 'Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi)'
+2019-10-08 22:33:44.821 +03:00 [INF] Route matched with {action = "Save", controller = "Pupil"}. Executing action Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi)
+2019-10-08 22:33:44.845 +03:00 [INF] Executing action method Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi) with arguments (["Tutors.Service.Dto.PupilInfo"]) - Validation state: "Valid"
+2019-10-08 22:33:46.743 +03:00 [INF] Save PupilInfo 0 Ярослав Китаев
+2019-10-08 22:33:48.441 +03:00 [INF] Get UserID 1
+2019-10-08 22:33:52.591 +03:00 [INF] Executed action Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi) in 7767.3401ms
+2019-10-08 22:33:52.593 +03:00 [INF] Executed endpoint 'Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi)'
+2019-10-08 22:33:52.597 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+MongoDB.Bson.BsonSerializationException: When using DictionaryRepresentation.Document key values must serialize as strings.
+   at MongoDB.Bson.Serialization.Serializers.DictionarySerializerBase`3.SerializeKeyString(TKey key)
+   at MongoDB.Bson.Serialization.Serializers.DictionarySerializerBase`3.SerializeDocumentRepresentation(BsonSerializationContext context, TDictionary value)
+   at MongoDB.Bson.Serialization.Serializers.ClassSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeClass(BsonSerializationContext context, BsonSerializationArgs args, TClass document)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TClass value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Bson.Serialization.Serializers.BsonValueSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TBsonValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Bson.Serialization.Serializers.BsonValueSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TBsonValue value)
+   at MongoDB.Driver.Core.Operations.BulkInsertOperation.InsertRequestSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, InsertRequest value)
+   at MongoDB.Bson.Serialization.Serializers.SealedClassSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteType1Section(BsonBinaryWriter writer, Type1CommandMessageSection section, Int64 messageStartPosition)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteSections(BsonBinaryWriter writer, IEnumerable`1 sections, Int64 messageStartPosition)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteMessage(CommandMessage message)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.SendMessagesHelper.EncodeMessages(CancellationToken cancellationToken, List`1& sentMessages)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.SendMessagesAsync(IEnumerable`1 messages, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.WireProtocol.CommandUsingCommandMessageWireProtocol`1.ExecuteAsync(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.ServerChannel.ExecuteProtocolAsync[TResult](IWireProtocol`1 protocol, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableWriteOperationExecutor.ExecuteAsync[TResult](IRetryableWriteOperation`1 operation, RetryableWriteContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkUnmixedWriteOperationBase`1.ExecuteBatchAsync(RetryableWriteContext context, Batch batch, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkUnmixedWriteOperationBase`1.ExecuteBatchesAsync(RetryableWriteContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkMixedWriteOperation.ExecuteBatchAsync(RetryableWriteContext context, Batch batch, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkMixedWriteOperation.ExecuteAsync(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperationAsync[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperationAsync[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOneAsync(TDocument document, InsertOneOptions options, Func`3 bulkWriteAsync)
+   at Tutors.Dao.Mongo.MongoPupilDao.SavePupil(Pupil pupil) in D:\Projects\Tutors\Tutors.Dao.Mongo\MongoPupilDao.cs:line 66
+   at Tutors.Service.Domain.Concrete.PupilDomainService.SavePupil(Pupil pupil) in D:\Projects\Tutors\Tutors.Service.Domain\Concrete\PupilDomainService.cs:line 72
+   at Tutors.Service.Concrete.PupilService.SavePupilInfo(PupilInfo pupil, Int32 userId) in D:\Projects\Tutors\Tutors.Service\Concrete\PupilService.cs:line 92
+   at Tutors.WebApi.Controllers.PupilController.Save(PupilInfo pupil) in D:\Projects\Tutors\Tutors.WebApi\Controllers\PupilController.cs:line 84
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware`1.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.SwaggerDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-10-08 22:33:52.732 +03:00 [INF] Request finished in 7923.777ms 500 text/html; charset=utf-8
+2019-10-08 23:14:01.957 +03:00 [INF] User profile is available. Using 'C:\Users\klimk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-08 23:14:08.056 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5001/api/pupil  
+2019-10-08 23:14:08.091 +03:00 [INF] CORS policy execution successful.
+2019-10-08 23:14:08.107 +03:00 [INF] Request finished in 52.6207ms 204 
+2019-10-08 23:14:08.117 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/api/pupil application/json 223
+2019-10-08 23:14:08.120 +03:00 [INF] CORS policy execution successful.
+2019-10-08 23:14:08.429 +03:00 [INF] Successfully validated the token.
+2019-10-08 23:14:08.462 +03:00 [INF] Executing endpoint 'Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi)'
+2019-10-08 23:14:08.505 +03:00 [INF] Route matched with {action = "Save", controller = "Pupil"}. Executing action Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi)
+2019-10-08 23:14:08.911 +03:00 [INF] Executing action method Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi) with arguments (["Tutors.Service.Dto.PupilInfo"]) - Validation state: "Valid"
+2019-10-08 23:14:11.604 +03:00 [INF] Save PupilInfo {"Id":0,"FirstName":"Ярослав","LastName":"Китаев","OneHourPrice":1200.0,"OneAndHalfPrice":1800.0,"TwoHourPrice":2400.0,"PupilSchedule":{"ScheduleLessons":[{"LessonDay":2,"LessonTime":"12:20:00","LessonsDuration":2}]}}
+2019-10-08 23:14:11.620 +03:00 [INF] Get UserID 1
+2019-10-08 23:14:14.900 +03:00 [INF] Executed action Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi) in 6386.394ms
+2019-10-08 23:14:14.909 +03:00 [INF] Executed endpoint 'Tutors.WebApi.Controllers.PupilController.Save (Tutors.WebApi)'
+2019-10-08 23:14:14.923 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+MongoDB.Bson.BsonSerializationException: When using DictionaryRepresentation.Document key values must serialize as strings.
+   at MongoDB.Bson.Serialization.Serializers.DictionarySerializerBase`3.SerializeKeyString(TKey key)
+   at MongoDB.Bson.Serialization.Serializers.DictionarySerializerBase`3.SerializeDocumentRepresentation(BsonSerializationContext context, TDictionary value)
+   at MongoDB.Bson.Serialization.Serializers.ClassSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.SerializeClass(BsonSerializationContext context, BsonSerializationArgs args, TClass document)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TClass value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Bson.Serialization.Serializers.BsonValueSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TBsonValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Bson.Serialization.Serializers.BsonValueSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TBsonValue value)
+   at MongoDB.Driver.Core.Operations.BulkInsertOperation.InsertRequestSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, InsertRequest value)
+   at MongoDB.Bson.Serialization.Serializers.SealedClassSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TValue value)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Serialize(BsonSerializationContext context, BsonSerializationArgs args, Object value)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteType1Section(BsonBinaryWriter writer, Type1CommandMessageSection section, Int64 messageStartPosition)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteSections(BsonBinaryWriter writer, IEnumerable`1 sections, Int64 messageStartPosition)
+   at MongoDB.Driver.Core.WireProtocol.Messages.Encoders.BinaryEncoders.CommandMessageBinaryEncoder.WriteMessage(CommandMessage message)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.SendMessagesHelper.EncodeMessages(CancellationToken cancellationToken, List`1& sentMessages)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.SendMessagesAsync(IEnumerable`1 messages, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.WireProtocol.CommandUsingCommandMessageWireProtocol`1.ExecuteAsync(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.Server.ServerChannel.ExecuteProtocolAsync[TResult](IWireProtocol`1 protocol, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableWriteOperationExecutor.ExecuteAsync[TResult](IRetryableWriteOperation`1 operation, RetryableWriteContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkUnmixedWriteOperationBase`1.ExecuteBatchAsync(RetryableWriteContext context, Batch batch, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkUnmixedWriteOperationBase`1.ExecuteBatchesAsync(RetryableWriteContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkMixedWriteOperation.ExecuteBatchAsync(RetryableWriteContext context, Batch batch, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.BulkMixedWriteOperation.ExecuteAsync(IWriteBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteWriteOperationAsync[TResult](IWriteBinding binding, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteWriteOperationAsync[TResult](IClientSessionHandle session, IWriteOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWriteAsync(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.InsertOneAsync(TDocument document, InsertOneOptions options, Func`3 bulkWriteAsync)
+   at Tutors.Dao.Mongo.MongoPupilDao.SavePupil(Pupil pupil) in D:\Projects\Tutors\Tutors.Dao.Mongo\MongoPupilDao.cs:line 66
+   at Tutors.Service.Domain.Concrete.PupilDomainService.SavePupil(Pupil pupil) in D:\Projects\Tutors\Tutors.Service.Domain\Concrete\PupilDomainService.cs:line 72
+   at Tutors.Service.Concrete.PupilService.SavePupilInfo(PupilInfo pupil, Int32 userId) in D:\Projects\Tutors\Tutors.Service\Concrete\PupilService.cs:line 92
+   at Tutors.WebApi.Controllers.PupilController.Save(PupilInfo pupil) in D:\Projects\Tutors\Tutors.WebApi\Controllers\PupilController.cs:line 85
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware`1.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.SwaggerDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-10-08 23:14:15.063 +03:00 [INF] Request finished in 6946.0075ms 500 text/html; charset=utf-8

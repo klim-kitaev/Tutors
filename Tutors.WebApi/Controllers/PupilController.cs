@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using Tutors.Service.Abstract;
 using Tutors.Service.Dto;
 
@@ -16,12 +17,12 @@ namespace Tutors.WebApi.Controllers
     public class PupilController : BaseController
     {
         private readonly IPupilService _pupilService;
-        private readonly ILogger _log;
+       
 
-        public PupilController(IPupilService pupilService, ILogger<PupilController> log)
+        public PupilController(IPupilService pupilService, ILogger<PupilController> log):base(log)
         {
             _pupilService = pupilService ?? throw new ArgumentNullException(nameof(pupilService));
-            _log = log ?? throw new ArgumentNullException(nameof(log));
+           
         }        
 
         /// <summary>
@@ -67,7 +68,7 @@ namespace Tutors.WebApi.Controllers
         [ProducesResponseType(400)]
         public async Task<ActionResult<PupilInfo>>Save(PupilInfo pupil)
         {
-            _log.LogInformation("Save PupilInfo {pupil}", pupil);
+            _log.LogInformation("Save PupilInfo {pupil}", JsonConvert.SerializeObject(pupil));
 
             if (pupil == null)
             {

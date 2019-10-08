@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Tutors.Service.Abstract;
 using Tutors.Service.Dto;
 
@@ -15,7 +16,7 @@ namespace Tutors.WebApi.Controllers
     {
         private readonly ILessonService _lessonService;
 
-        public LessonsController(ILessonService lessonService)
+        public LessonsController(ILessonService lessonService, ILogger<PupilController> log) : base(log)
         {
             _lessonService = lessonService ?? throw new ArgumentNullException(nameof(lessonService));
         }

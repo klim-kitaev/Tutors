@@ -1,0 +1,60 @@
+2019-10-03 23:27:46.588 +03:00 [INF] User profile is available. Using 'C:\Users\klimk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-03 23:28:01.865 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5001/api/pupil  
+2019-10-03 23:28:01.938 +03:00 [INF] CORS policy execution successful.
+2019-10-03 23:28:01.977 +03:00 [INF] Request finished in 116.7513ms 204 
+2019-10-03 23:28:02.186 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/pupil application/json 
+2019-10-03 23:28:02.196 +03:00 [INF] CORS policy execution successful.
+2019-10-03 23:28:02.662 +03:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token: undefined
+2019-10-03 23:28:02.694 +03:00 [INF] Executing endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-03 23:28:02.729 +03:00 [INF] Route matched with {action = "Get", controller = "Pupil"}. Executing action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)
+2019-10-03 23:28:03.109 +03:00 [INF] Executing action method Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) - Validation state: "Valid"
+2019-10-03 23:28:33.532 +03:00 [INF] Executed action Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi) in 30798.190000000002ms
+2019-10-03 23:28:33.536 +03:00 [INF] Executed endpoint 'Tutors.WebApi.Controllers.PupilController.Get (Tutors.WebApi)'
+2019-10-03 23:28:33.547 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.TimeoutException: A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/localhost:27017" }", EndPoint: "Unspecified/localhost:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server. ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No connection could be made because the target machine actively refused it [::1]:27017
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.<>c.<ConnectAsync>b__271_0(IAsyncResult iar)
+--- End of stack trace from previous location where exception was thrown ---
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.ConnectAsync(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStreamAsync(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.HeartbeatAsync(CancellationToken cancellationToken)", LastUpdateTimestamp: "2019-10-03T20:28:29.7527921Z" }] }.
+   at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedAsync(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServerAsync(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterSeverSelctionAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.StartImplicitSessionAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Tutors.Dao.Mongo.MongoPupilDao.GetPupils(Int32 userId) in D:\Projects\Tutors\Tutors.Dao.Mongo\MongoPupilDao.cs:line 58
+   at Tutors.Service.Domain.Concrete.PupilDomainService.GetPupils(Int32 userId) in D:\Projects\Tutors\Tutors.Service.Domain\Concrete\PupilDomainService.cs:line 46
+   at Tutors.Service.Concrete.PupilService.GetPupils(Int32 userId) in D:\Projects\Tutors\Tutors.Service\Concrete\PupilService.cs:line 65
+   at Tutors.WebApi.Controllers.PupilController.Get() in D:\Projects\Tutors\Tutors.WebApi\Controllers\PupilController.cs:line 36
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware`1.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.SwaggerDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-10-03 23:28:33.644 +03:00 [INF] Request finished in 31457.6079ms 500 text/html; charset=utf-8
