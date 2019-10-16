@@ -1,5 +1,8 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Conventions;
+using MongoDB.Bson.Serialization.Options;
+using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -12,19 +15,24 @@ namespace Tutors.Dao.Mongo
     public class MongoPupilDao : IPupilDao
     {
         IMongoDatabase database;
-        
-        //static MongoPupilDao()
-        //{
-        //    BsonClassMap.RegisterClassMap<Pupil>(cm =>
-        //    {
-        //        cm.AutoMap();
-        //        cm.MapIdMember(c => c.Id).SetIdGenerator(CombGuidGenerator.Instance);
-        //    });
-        //}
+
+        static MongoPupilDao()
+        {
+            BsonClassMap.RegisterClassMap<Pupil>(cm =>
+            {
+                cm.AutoMap();
+                cm.IdMemberMap.SetIdGenerator(new IntIdGenerator("tutor_identity"));
+                cm.MapMember(c => c.PriceList).SetSerializer(new DictionaryInterfaceImplementerSerializer<Dictionary<LessonDuration, decimal>>(DictionaryRepresentation.ArrayOfArrays));
+            });
+            //ConventionRegistry.Register(
+            //   "DictionaryRepresentationConvention",
+            //   new ConventionPack { new DictionaryRepresentationConvention(DictionaryRepresentation.ArrayOfArrays) },
+            //   _ => true);
+        }
 
         public MongoPupilDao(string connectionString)
         {
-            var client = new MongoClient(connectionString);
+            var client = new MongoClient(connectionString);                                  
             database = client.GetDatabase("tutors");
         }
 
