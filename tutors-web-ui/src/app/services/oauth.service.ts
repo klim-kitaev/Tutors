@@ -13,14 +13,15 @@ export class OAuthService {
         this.userManager = new UserManager(settings);
         // this.getUser().subscribe(p => {
         //     this.access_token = p == null ? "" : (p.access_token || "");
-        // });  
+        // });
+        this.userManager.getUser().then(p=>this.setAccessToken(p));  
     }
 
     login(): Observable<any> {
         return from(this.userManager.signinRedirect());
     }
 
-    setAccessToken(user:User){  
+    setAccessToken(user:User){
         this.access_token = user == null ? "" : (user.access_token || "");
     }
 

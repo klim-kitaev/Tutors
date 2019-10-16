@@ -51,6 +51,15 @@ export class AppComponent implements OnInit {
       });
   }
 
+  // public checkAuth(){
+  //   console.log("is auth " + this.isAuth)
+  //   console.log("name: " + this.userName)
+  //   console.log("access token " + this.oauthService.token)
+  //   this.oauthService.getUser().subscribe(p=>{
+  //     console.log("User "+ JSON.stringify(p))
+  //   })
+  // }
+
 
 
 }
